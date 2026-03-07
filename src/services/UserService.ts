@@ -3,7 +3,7 @@ import {AxiosResponse} from 'axios';
 import {IUser} from "../models/IUser";
 
 export default class UserService {
-    static async fetchUsers(email: string, password: string): Promise<AxiosResponse<IUser[]>> {
-        return $api.get<IUser[]>('/login');
+    static async fetchUsers(): Promise<AxiosResponse<IUser[]>> {
+        return $api.get<IUser[]>('/users');
     }
 }
